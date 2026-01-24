@@ -2,8 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Emages Group</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emages Group | Ecosistema de Soluciones Estratégicas</title>
 
   <style>
     * {
@@ -14,70 +14,65 @@
     }
 
     body {
-      background: #0b0f1a;
+      background: #0e0e0e;
       color: #ffffff;
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* HERO */
-    .hero {
-      height: 100vh;
+    header {
       background: linear-gradient(
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.65)
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.7)
       ),
-      url("hero-emages.jpg") center/cover no-repeat;
+      url("assets/hero.jpg") center/cover no-repeat;
+      min-height: 100vh;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       text-align: center;
       padding: 20px;
     }
 
-    .hero-content {
-      max-width: 900px;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
+    header img {
+      max-width: 180px;
       margin-bottom: 20px;
     }
 
-    .hero p {
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      max-width: 700px;
       font-size: 1.2rem;
       opacity: 0.9;
     }
 
-    /* SECCIONES */
     section {
       padding: 80px 20px;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
     }
 
     section h2 {
-      text-align: center;
       font-size: 2.2rem;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
-    /* ECOSISTEMA */
-    .ecosystem {
+    .services {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
+      margin-top: 40px;
     }
 
     .card {
-      background: #13182b;
-      border-radius: 12px;
+      background: #1a1a1a;
       padding: 30px;
-      text-align: center;
+      border-radius: 12px;
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
@@ -87,139 +82,68 @@
     }
 
     .card h3 {
-      margin-bottom: 15px;
-      color: #4da3ff;
+      margin-bottom: 10px;
+      font-size: 1.4rem;
     }
 
     .card p {
       font-size: 0.95rem;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
-    /* ENFOQUE */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      text-align: center;
-    }
-
-    .feature {
-      background: #13182b;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    /* CONTACTO */
-    .contact {
-      text-align: center;
-    }
-
-    .contact p {
-      margin-bottom: 10px;
-    }
-
-    /* FOOTER */
     footer {
-      background: #050810;
+      background: #000;
       text-align: center;
-      padding: 20px;
-      font-size: 0.85rem;
-      opacity: 0.8;
-    }
-
-    /* WHATSAPP */
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 28px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      z-index: 999;
+      padding: 30px;
+      font-size: 0.9rem;
+      opacity: 0.7;
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="hero-content">
+  <header>
+    <img src="assets/logo.png" alt="Emages Group">
     <h1>Emages Group</h1>
     <p>
-      Ecosistema de soluciones estratégicas en educación, marketing
-      e imagen corporativa. Conectamos visión, creatividad y resultados.
+      Grupo creativo y estratégico que integra soluciones digitales,
+      comunicación visual y desarrollo de marcas con visión de futuro.
     </p>
-  </div>
-</header>
+  </header>
 
-<!-- ECOSISTEMA -->
-<section>
-  <h2>Nuestro Ecosistema</h2>
+  <section>
+    <h2>Nuestras Marcas</h2>
 
-  <div class="ecosystem">
-    <div class="card">
-      <h3>GRAVIA</h3>
-      <p>
-        Formación, educación y desarrollo profesional.
-        Creamos conocimiento con impacto real.
-      </p>
+    <div class="services">
+      <div class="card">
+        <h3>Gravia</h3>
+        <p>
+          Agencia especializada en diseño, branding y comunicación visual.
+          Tendrá su propio subdominio y espacio independiente.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Emages Digital</h3>
+        <p>
+          Desarrollo web, soluciones digitales y automatización de procesos
+          para empresas modernas.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Emages Media</h3>
+        <p>
+          Contenido audiovisual, fotografía, video y storytelling para marcas.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <h3>IDEG</h3>
-      <p>
-        Estrategia, marketing y crecimiento digital.
-        Marcas que comunican y convierten.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>AYVÉ</h3>
-      <p>
-        Imagen, identidad y presencia visual.
-        Construimos percepción y posicionamiento.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- ENFOQUE -->
-<section>
-  <h2>Nuestro Enfoque</h2>
-
-  <div class="features">
-    <div class="feature">Estrategia personalizada</div>
-    <div class="feature">Creatividad con propósito</div>
-    <div class="feature">Visión de ecosistema</div>
-    <div class="feature">Resultados medibles</div>
-  </div>
-</section>
-
-<!-- CONTACTO -->
-<section class="contact">
-  <h2>Contacto</h2>
-  <p>📩 hola@emagesgroup.com</p>
-  <p>📩 gravia@emagesgroup.com</p>
-  <p>📩 ideg@emagesgroup.com</p>
-  <p>📩 ayve@emagesgroup.com</p>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2026 Emages Group · Todos los derechos reservados
-</footer>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/51930175586" target="_blank">💬</a>
+  <footer>
+    © 2026 Emages Group · Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
