@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EMAGESGROUP</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
@@ -20,14 +20,16 @@ scroll-behavior:smooth;
 body{
 background:#ffffff;
 color:#1a1a1a;
+line-height:1.6;
 }
 
 header{
 position:fixed;
 width:100%;
 top:0;
-background:#0F2B5B;
-padding:15px 8%;
+background:rgba(15,43,91,0.95);
+backdrop-filter:blur(10px);
+padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -36,8 +38,9 @@ z-index:1000;
 
 header h1{
 color:#fff;
-font-size:20px;
+font-size:18px;
 font-weight:600;
+letter-spacing:1px;
 }
 
 nav a{
@@ -45,6 +48,12 @@ color:#fff;
 text-decoration:none;
 margin-left:25px;
 font-size:14px;
+opacity:0.85;
+transition:0.3s;
+}
+
+nav a:hover{
+opacity:1;
 }
 
 .hero{
@@ -55,30 +64,30 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:0 10%;
-background:linear-gradient(135deg,#ffffff 60%,#eef3ff 100%);
+background:linear-gradient(135deg,#ffffff 50%,#f2f6ff 100%);
 }
 
 .hero h2{
-font-size:36px;
+font-size:40px;
 font-weight:700;
-margin-bottom:20px;
 color:#0F2B5B;
+max-width:900px;
 }
 
-.hero span{
+.hero h2 span{
 display:block;
 font-weight:400;
 font-size:18px;
-margin-top:10px;
+margin-top:20px;
 color:#444;
 }
 
 .buttons{
-margin-top:30px;
+margin-top:40px;
 }
 
 .btn{
-padding:12px 25px;
+padding:14px 28px;
 border-radius:30px;
 border:none;
 cursor:pointer;
@@ -90,59 +99,63 @@ transition:0.3s;
 .btn-primary{
 background:#0F2B5B;
 color:#fff;
+box-shadow:0 6px 18px rgba(15,43,91,0.3);
 }
 
 .btn-primary:hover{
 background:#1c3f85;
+transform:translateY(-3px);
 }
 
 section{
-padding:100px 8%;
+padding:110px 8%;
 }
 
 .section-title{
 text-align:center;
-margin-bottom:60px;
-font-size:28px;
+margin-bottom:70px;
+font-size:30px;
 font-weight:600;
 color:#0F2B5B;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:35px;
 }
 
 .card{
-padding:30px;
-border-radius:15px;
-box-shadow:0 8px 25px rgba(0,0,0,0.08);
-transition:0.3s;
+padding:35px;
+border-radius:18px;
+box-shadow:0 15px 35px rgba(0,0,0,0.06);
+transition:0.4s;
 background:#fff;
+position:relative;
+overflow:hidden;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .card h3{
-margin-top:15px;
+margin-top:20px;
 font-size:18px;
 }
 
 .card p{
 font-size:14px;
-margin-top:10px;
+margin-top:12px;
 color:#555;
 }
 
 .icon{
-width:40px;
-height:40px;
+width:45px;
+height:45px;
+stroke-width:1.5;
 }
 
-/* Colores por división */
 .consulting{border-top:5px solid #0F2B5B;}
 .talent{border-top:5px solid #2e8b57;}
 .academy{border-top:5px solid #f39c12;}
@@ -150,20 +163,47 @@ height:40px;
 .marketing{border-top:5px solid #c0392b;}
 
 .model{
-background:#f5f7fa;
+background:#f7f9fc;
 text-align:center;
+padding:120px 15%;
 }
 
-footer{
+.model p{
+max-width:800px;
+margin:auto;
+font-size:16px;
+color:#444;
+}
+
+.cta{
 background:#0F2B5B;
 color:#fff;
 text-align:center;
-padding:40px 8%;
+padding:100px 10%;
+}
+
+.cta h2{
+font-size:28px;
+font-weight:600;
+}
+
+.cta p{
+margin-top:20px;
+font-size:16px;
+opacity:0.9;
+}
+
+footer{
+background:#081c3a;
+color:#fff;
+text-align:center;
+padding:50px 8%;
 }
 
 footer p{
-font-size:14px;
+font-size:13px;
 margin-top:10px;
+opacity:0.8;
 }
 </style>
 </head>
@@ -184,7 +224,7 @@ margin-top:10px;
 <h2>
 Estrategia · Talento · Tecnología<br>
 para Organizaciones en Evolución.
-<span>Soluciones empresariales integrales adaptadas a cada organización.</span>
+<span>Soluciones empresariales integrales adaptadas a la realidad y objetivos de cada organización.</span>
 </h2>
 
 <div class="buttons">
@@ -195,7 +235,7 @@ Conoce nuestras divisiones
 </section>
 
 <section id="divisiones">
-<h2 class="section-title">Nuestras Divisiones Especializadas</h2>
+<h2 class="section-title">Divisiones Especializadas</h2>
 
 <div class="grid">
 
@@ -208,25 +248,25 @@ Conoce nuestras divisiones
 <div class="card talent">
 <i data-lucide="users" class="icon"></i>
 <h3>EMAGES Talent</h3>
-<p>Gestión integral de recursos humanos y desarrollo organizacional.</p>
+<p>Gestión integral de recursos humanos, evaluación y desarrollo organizacional.</p>
 </div>
 
 <div class="card academy">
 <i data-lucide="graduation-cap" class="icon"></i>
 <h3>EMAGES Academy</h3>
-<p>Capacitación empresarial, diplomados y formación profesional.</p>
+<p>Capacitación empresarial, diplomados y formación especializada.</p>
 </div>
 
 <div class="card tech">
 <i data-lucide="cpu" class="icon"></i>
 <h3>EMAGES Tech</h3>
-<p>Soluciones tecnológicas, desarrollo web y software empresarial.</p>
+<p>Soluciones tecnológicas, desarrollo web e integración de sistemas.</p>
 </div>
 
 <div class="card marketing">
 <i data-lucide="megaphone" class="icon"></i>
 <h3>EMAGES Marketing & Events</h3>
-<p>Publicidad estratégica y producción integral de eventos.</p>
+<p>Publicidad estratégica y producción integral de eventos corporativos.</p>
 </div>
 
 </div>
@@ -235,9 +275,15 @@ Conoce nuestras divisiones
 <section id="modelo" class="model">
 <h2 class="section-title">Nuestro Modelo Integral</h2>
 <p>
-Centralizamos visión estratégica y descentralizamos ejecución especializada a través de nuestras divisiones.
-Un solo grupo, múltiples soluciones coordinadas.
+EMAGESGROUP centraliza la visión estratégica y ejecuta soluciones especializadas a través de sus divisiones.
+Un modelo diseñado para ofrecer coherencia, eficiencia y resultados medibles.
 </p>
+</section>
+
+<section class="cta">
+<h2>¿Listo para impulsar tu organización?</h2>
+<p>Agenda una asesoría estratégica y descubre cómo podemos ayudarte.</p>
+<button class="btn btn-primary" style="margin-top:30px;">Solicitar asesoría</button>
 </section>
 
 <section id="contacto">
