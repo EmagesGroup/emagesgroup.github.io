@@ -21,6 +21,7 @@ body{
 background:#ffffff;
 color:#1a1a1a;
 line-height:1.6;
+overflow-x:hidden;
 }
 
 header{
@@ -28,7 +29,7 @@ position:fixed;
 width:100%;
 top:0;
 background:rgba(15,43,91,0.95);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(8px);
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
@@ -56,6 +57,10 @@ nav a:hover{
 opacity:1;
 }
 
+section{
+padding:120px 8%;
+}
+
 .hero{
 height:100vh;
 display:flex;
@@ -68,22 +73,18 @@ background:linear-gradient(135deg,#ffffff 50%,#f2f6ff 100%);
 }
 
 .hero h2{
-font-size:40px;
+font-size:42px;
 font-weight:700;
 color:#0F2B5B;
 max-width:900px;
 }
 
-.hero h2 span{
+.hero span{
 display:block;
 font-weight:400;
 font-size:18px;
 margin-top:20px;
 color:#444;
-}
-
-.buttons{
-margin-top:40px;
 }
 
 .btn{
@@ -92,23 +93,19 @@ border-radius:30px;
 border:none;
 cursor:pointer;
 font-size:14px;
-margin:10px;
+margin-top:35px;
 transition:0.3s;
 }
 
 .btn-primary{
 background:#0F2B5B;
 color:#fff;
-box-shadow:0 6px 18px rgba(15,43,91,0.3);
+box-shadow:0 8px 25px rgba(15,43,91,0.25);
 }
 
 .btn-primary:hover{
 background:#1c3f85;
-transform:translateY(-3px);
-}
-
-section{
-padding:110px 8%;
+transform:translateY(-4px);
 }
 
 .section-title{
@@ -131,8 +128,13 @@ border-radius:18px;
 box-shadow:0 15px 35px rgba(0,0,0,0.06);
 transition:0.4s;
 background:#fff;
-position:relative;
-overflow:hidden;
+opacity:0;
+transform:translateY(40px);
+}
+
+.card.visible{
+opacity:1;
+transform:translateY(0);
 }
 
 .card:hover{
@@ -162,34 +164,22 @@ stroke-width:1.5;
 .tech{border-top:5px solid #5B3E96;}
 .marketing{border-top:5px solid #c0392b;}
 
-.model{
+.light-bg{
 background:#f7f9fc;
-text-align:center;
-padding:120px 15%;
-}
-
-.model p{
-max-width:800px;
-margin:auto;
-font-size:16px;
-color:#444;
 }
 
 .cta{
 background:#0F2B5B;
 color:#fff;
 text-align:center;
-padding:100px 10%;
 }
 
 .cta h2{
 font-size:28px;
-font-weight:600;
 }
 
 .cta p{
-margin-top:20px;
-font-size:16px;
+margin-top:15px;
 opacity:0.9;
 }
 
@@ -215,7 +205,7 @@ opacity:0.8;
 <nav>
 <a href="#">Inicio</a>
 <a href="#divisiones">Divisiones</a>
-<a href="#modelo">Modelo</a>
+<a href="#impacto">Impacto</a>
 <a href="#contacto">Contacto</a>
 </nav>
 </header>
@@ -227,11 +217,9 @@ para Organizaciones en Evolución.
 <span>Soluciones empresariales integrales adaptadas a la realidad y objetivos de cada organización.</span>
 </h2>
 
-<div class="buttons">
 <button class="btn btn-primary" onclick="document.getElementById('divisiones').scrollIntoView({behavior:'smooth'})">
 Conoce nuestras divisiones
 </button>
-</div>
 </section>
 
 <section id="divisiones">
@@ -242,13 +230,13 @@ Conoce nuestras divisiones
 <div class="card consulting">
 <i data-lucide="bar-chart-3" class="icon"></i>
 <h3>EMAGES Consulting</h3>
-<p>Planeamiento estratégico, asesoría tributaria, financiera y societaria.</p>
+<p>Planeamiento estratégico, asesoría tributaria y financiera.</p>
 </div>
 
 <div class="card talent">
 <i data-lucide="users" class="icon"></i>
 <h3>EMAGES Talent</h3>
-<p>Gestión integral de recursos humanos, evaluación y desarrollo organizacional.</p>
+<p>Gestión integral de recursos humanos y desarrollo organizacional.</p>
 </div>
 
 <div class="card academy">
@@ -260,30 +248,48 @@ Conoce nuestras divisiones
 <div class="card tech">
 <i data-lucide="cpu" class="icon"></i>
 <h3>EMAGES Tech</h3>
-<p>Soluciones tecnológicas, desarrollo web e integración de sistemas.</p>
+<p>Soluciones tecnológicas y desarrollo digital empresarial.</p>
 </div>
 
 <div class="card marketing">
 <i data-lucide="megaphone" class="icon"></i>
 <h3>EMAGES Marketing & Events</h3>
-<p>Publicidad estratégica y producción integral de eventos corporativos.</p>
+<p>Publicidad estratégica y producción integral de eventos.</p>
 </div>
 
 </div>
 </section>
 
-<section id="modelo" class="model">
-<h2 class="section-title">Nuestro Modelo Integral</h2>
-<p>
-EMAGESGROUP centraliza la visión estratégica y ejecuta soluciones especializadas a través de sus divisiones.
-Un modelo diseñado para ofrecer coherencia, eficiencia y resultados medibles.
-</p>
+<section id="impacto" class="light-bg">
+<h2 class="section-title">Impacto & Compromiso Social</h2>
+
+<div class="grid">
+
+<div class="card">
+<i data-lucide="heart-handshake" class="icon"></i>
+<h3>Programas Gratuitos</h3>
+<p>Impulsamos capacitaciones abiertas para emprendedores y profesionales.</p>
+</div>
+
+<div class="card">
+<i data-lucide="book-open" class="icon"></i>
+<h3>Charlas Empresariales</h3>
+<p>Promovemos cultura digital, gestión empresarial y liderazgo.</p>
+</div>
+
+<div class="card">
+<i data-lucide="globe" class="icon"></i>
+<h3>Proyección Nacional</h3>
+<p>Construimos una red empresarial con visión de desarrollo sostenible.</p>
+</div>
+
+</div>
 </section>
 
 <section class="cta">
-<h2>¿Listo para impulsar tu organización?</h2>
-<p>Agenda una asesoría estratégica y descubre cómo podemos ayudarte.</p>
-<button class="btn btn-primary" style="margin-top:30px;">Solicitar asesoría</button>
+<h2>Construyamos el crecimiento de tu organización</h2>
+<p>Agenda una asesoría estratégica o participa en nuestros programas.</p>
+<button class="btn btn-primary">Solicitar asesoría</button>
 </section>
 
 <section id="contacto">
@@ -304,6 +310,18 @@ Un modelo diseñado para ofrecer coherencia, eficiencia y resultados medibles.
 
 <script>
 lucide.createIcons();
+
+const cards = document.querySelectorAll('.card');
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+cards.forEach(card=>{
+observer.observe(card);
+});
 </script>
 
 </body>
