@@ -3,116 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emages Group | Soluciones Estratégicas</title>
+<title>Emages Group</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Montserrat', sans-serif;
+font-family:'Poppins', sans-serif;
 }
 
 body{
-background:#0b0f19;
-color:white;
+background:#f5f6f8;
+color:#333;
 }
 
+/* HEADER */
 header{
-position:fixed;
-width:100%;
+background:white;
 padding:20px 60px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,0.6);
-backdrop-filter:blur(8px);
-z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-header h1{
-color:#d4af37;
+.logo{
+font-size:24px;
 font-weight:700;
 }
 
+.logo span{
+color:#f39c12;
+}
+
 nav a{
-color:white;
 margin-left:30px;
 text-decoration:none;
+color:#444;
 font-weight:500;
-transition:0.3s;
 }
 
-nav a:hover{
-color:#d4af37;
+.btn-header{
+background:#f39c12;
+color:white;
+padding:10px 20px;
+border-radius:25px;
 }
 
+/* HERO */
 .hero{
-height:100vh;
-background:url('https://images.unsplash.com/photo-1552664730-d307ca884978') center/cover no-repeat;
+height:80vh;
+background:url('https://images.unsplash.com/photo-1505761671935-60b3a7427bad') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-padding:20px;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(255,255,255,0.8);
 }
 
 .hero-content{
-background:rgba(0,0,0,0.65);
-padding:50px;
-border-radius:15px;
+position:relative;
+z-index:2;
 max-width:800px;
 }
 
-.hero h2{
+.hero h1{
 font-size:48px;
-margin-bottom:20px;
-color:#ffffff;
+margin-bottom:15px;
 }
 
 .hero p{
 font-size:20px;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .btn{
-display:inline-block;
-padding:15px 35px;
-background:#d4af37;
-color:black;
-font-weight:600;
+background:#f39c12;
+color:white;
+padding:14px 30px;
 border-radius:30px;
 text-decoration:none;
-transition:0.3s;
+font-weight:600;
 }
 
-.btn:hover{
-background:white;
-}
-
+/* DIVISIONES */
 .section{
-padding:100px 60px;
+padding:80px 60px;
 text-align:center;
 }
 
-.section h3{
-font-size:36px;
-margin-bottom:40px;
-color:#d4af37;
+.section h2{
+font-size:32px;
+margin-bottom:15px;
 }
 
-.services{
+.section p{
+margin-bottom:40px;
+color:#666;
+}
+
+.grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
 .card{
-background:#111827;
+background:white;
 padding:30px;
 border-radius:15px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+text-align:left;
 transition:0.3s;
 }
 
@@ -120,12 +132,28 @@ transition:0.3s;
 transform:translateY(-8px);
 }
 
+.card h3{
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+margin-bottom:15px;
+}
+
+.card a{
+color:#f39c12;
+font-weight:600;
+text-decoration:none;
+}
+
+/* FOOTER */
 footer{
-background:#000;
-padding:40px;
+background:#222;
+color:white;
 text-align:center;
-font-size:14px;
-color:#aaa;
+padding:30px;
+margin-top:50px;
 }
 </style>
 </head>
@@ -133,43 +161,55 @@ color:#aaa;
 <body>
 
 <header>
-<h1>EMAGES GROUP</h1>
+<div class="logo">EMAGES <span>GROUP</span></div>
 <nav>
-<a href="#servicios">Servicios</a>
-<a href="#contacto">Contacto</a>
+<a href="#">Inicio</a>
+<a href="#">Nosotros</a>
+<a href="#">Divisiones</a>
+<a href="#">Blog</a>
+<a href="#" class="btn-header">Contáctanos</a>
 </nav>
 </header>
 
 <section class="hero">
 <div class="hero-content">
-<h2>Soluciones Estratégicas en Marketing y Desarrollo Digital</h2>
-<p>Grupo creativo que integra comunicación visual, posicionamiento de marca y crecimiento empresarial.</p>
-<a href="https://wa.me/51999999999" class="btn">Contáctanos</a>
+<h1>Bienvenido a EMAGES GROUP</h1>
+<p>Impulsando el crecimiento y la innovación</p>
+<a href="#" class="btn">Conoce más</a>
 </div>
 </section>
 
-<section class="section" id="servicios">
-<h3>Nuestros Servicios</h3>
-<div class="services">
-<div class="card">
-<h4>Marketing Digital</h4>
-<p>Estrategias de posicionamiento, publicidad y crecimiento de marca.</p>
-</div>
-<div class="card">
-<h4>Desarrollo Web</h4>
-<p>Creación de sitios profesionales optimizados y funcionales.</p>
-</div>
-<div class="card">
-<h4>Branding & Diseño</h4>
-<p>Identidad visual, logotipos y desarrollo estratégico de marca.</p>
-</div>
-</div>
-</section>
+<section class="section">
+<h2>Nuestras Divisiones</h2>
+<p>Soluciones integrales para educación, talento, marketing y comercio</p>
 
-<section class="section" id="contacto">
-<h3>Contacto</h3>
-<p>Escríbenos para potenciar tu negocio.</p>
-<a href="mailto:info@emagesgroup.com" class="btn">Enviar Correo</a>
+<div class="grid">
+
+<div class="card">
+<h3>Emages Academy</h3>
+<p>Educación & Capacitación. Programas innovadores para el desarrollo profesional.</p>
+<a href="#">Leer más ></a>
+</div>
+
+<div class="card">
+<h3>Emages Talent</h3>
+<p>Modelaje & Imagen. Agencia especializada en desarrollo de talento.</p>
+<a href="#">Leer más ></a>
+</div>
+
+<div class="card">
+<h3>Emages Creative</h3>
+<p>Marketing & Publicidad. Estrategias digitales y posicionamiento de marca.</p>
+<a href="#">Leer más ></a>
+</div>
+
+<div class="card">
+<h3>Emages Trade</h3>
+<p>Comercio & Importaciones. Soluciones estratégicas para expansión global.</p>
+<a href="#">Leer más ></a>
+</div>
+
+</div>
 </section>
 
 <footer>
