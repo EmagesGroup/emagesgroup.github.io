@@ -1,149 +1,180 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Emages Group</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emages Group | Soluciones Estratégicas</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    body {
-      background: #0e0e0e;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Montserrat', sans-serif;
+}
 
-    header {
-      background: linear-gradient(
-        rgba(0,0,0,0.7),
-        rgba(0,0,0,0.7)
-      ),
-      url("assets/hero.jpg") center/cover no-repeat;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
+body{
+background:#0b0f19;
+color:white;
+}
 
-    header img {
-      max-width: 180px;
-      margin-bottom: 20px;
-    }
+header{
+position:fixed;
+width:100%;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.6);
+backdrop-filter:blur(8px);
+z-index:1000;
+}
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+header h1{
+color:#d4af37;
+font-weight:700;
+}
 
-    header p {
-      max-width: 700px;
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
+nav a{
+color:white;
+margin-left:30px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
 
-    section {
-      padding: 80px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+nav a:hover{
+color:#d4af37;
+}
 
-    section h2 {
-      font-size: 2.2rem;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+.hero{
+height:100vh;
+background:url('https://images.unsplash.com/photo-1552664730-d307ca884978') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
+.hero-content{
+background:rgba(0,0,0,0.65);
+padding:50px;
+border-radius:15px;
+max-width:800px;
+}
 
-    .card {
-      background: #1a1a1a;
-      padding: 30px;
-      border-radius: 12px;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
+.hero h2{
+font-size:48px;
+margin-bottom:20px;
+color:#ffffff;
+}
 
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    }
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
 
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.4rem;
-    }
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#d4af37;
+color:black;
+font-weight:600;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;
+}
 
-    .card p {
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
+.btn:hover{
+background:white;
+}
 
-    footer {
-      background: #000;
-      text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
-      opacity: 0.7;
-    }
-  </style>
+.section{
+padding:100px 60px;
+text-align:center;
+}
+
+.section h3{
+font-size:36px;
+margin-bottom:40px;
+color:#d4af37;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111827;
+padding:30px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+footer{
+background:#000;
+padding:40px;
+text-align:center;
+font-size:14px;
+color:#aaa;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="assets/logo.png" alt="Emages Group">
-    <h1>Emages Group</h1>
-    <p>
-      Grupo creativo y estratégico que integra soluciones digitales,
-      comunicación visual y desarrollo de marcas con visión de futuro.
-    </p>
-  </header>
+<header>
+<h1>EMAGES GROUP</h1>
+<nav>
+<a href="#servicios">Servicios</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</header>
 
-  <section>
-    <h2>Nuestras Marcas</h2>
+<section class="hero">
+<div class="hero-content">
+<h2>Soluciones Estratégicas en Marketing y Desarrollo Digital</h2>
+<p>Grupo creativo que integra comunicación visual, posicionamiento de marca y crecimiento empresarial.</p>
+<a href="https://wa.me/51999999999" class="btn">Contáctanos</a>
+</div>
+</section>
 
-    <div class="services">
-      <div class="card">
-        <h3>Gravia</h3>
-        <p>
-          Agencia especializada en diseño, branding y comunicación visual.
-          Tendrá su propio subdominio y espacio independiente.
-        </p>
-      </div>
+<section class="section" id="servicios">
+<h3>Nuestros Servicios</h3>
+<div class="services">
+<div class="card">
+<h4>Marketing Digital</h4>
+<p>Estrategias de posicionamiento, publicidad y crecimiento de marca.</p>
+</div>
+<div class="card">
+<h4>Desarrollo Web</h4>
+<p>Creación de sitios profesionales optimizados y funcionales.</p>
+</div>
+<div class="card">
+<h4>Branding & Diseño</h4>
+<p>Identidad visual, logotipos y desarrollo estratégico de marca.</p>
+</div>
+</div>
+</section>
 
-      <div class="card">
-        <h3>Emages Digital</h3>
-        <p>
-          Desarrollo web, soluciones digitales y automatización de procesos
-          para empresas modernas.
-        </p>
-      </div>
+<section class="section" id="contacto">
+<h3>Contacto</h3>
+<p>Escríbenos para potenciar tu negocio.</p>
+<a href="mailto:info@emagesgroup.com" class="btn">Enviar Correo</a>
+</section>
 
-      <div class="card">
-        <h3>Emages Media</h3>
-        <p>
-          Contenido audiovisual, fotografía, video y storytelling para marcas.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    © 2026 Emages Group · Todos los derechos reservados
-  </footer>
+<footer>
+© 2026 Emages Group. Todos los derechos reservados.
+</footer>
 
 </body>
 </html>
