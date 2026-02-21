@@ -6,6 +6,7 @@
 <title>Emages Group</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 
 <style>
 *{
@@ -13,6 +14,7 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins', sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
@@ -28,6 +30,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 box-shadow:0 2px 10px rgba(0,0,0,0.05);
+position:fixed;
+width:100%;
+z-index:1000;
 }
 
 .logo{
@@ -55,13 +60,14 @@ border-radius:25px;
 
 /* HERO */
 .hero{
-height:80vh;
-background:url('https://images.unsplash.com/photo-1497366754035-f200968a6e72') center/cover no-repeat;
+height:90vh;
+background:url('https://images.unsplash.com/photo-1497366216548-37526070297c') center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
 position:relative;
+padding:20px;
 }
 
 .hero::after{
@@ -70,13 +76,14 @@ position:absolute;
 width:100%;
 height:100%;
 background:rgba(255,255,255,0.85);
-backdrop-filter: blur(2px);
+backdrop-filter:blur(2px);
 }
 
 .hero-content{
 position:relative;
 z-index:2;
 max-width:800px;
+margin-top:80px;
 }
 
 .hero h1{
@@ -98,9 +105,9 @@ text-decoration:none;
 font-weight:600;
 }
 
-/* DIVISIONES */
+/* SECCION */
 .section{
-padding:80px 60px;
+padding:120px 60px 80px 60px;
 text-align:center;
 }
 
@@ -127,10 +134,16 @@ border-radius:15px;
 box-shadow:0 8px 20px rgba(0,0,0,0.05);
 text-align:left;
 transition:0.3s;
+border-top:6px solid transparent;
 }
 
 .card:hover{
 transform:translateY(-8px);
+}
+
+.card i{
+font-size:30px;
+margin-bottom:15px;
 }
 
 .card h3{
@@ -143,9 +156,38 @@ margin-bottom:15px;
 }
 
 .card a{
-color:#f39c12;
 font-weight:600;
 text-decoration:none;
+}
+
+/* COLORES POR DIVISION */
+
+.academy{
+border-top-color:#16a085;
+}
+.academy i, .academy a{
+color:#16a085;
+}
+
+.talent{
+border-top-color:#c0392b;
+}
+.talent i, .talent a{
+color:#c0392b;
+}
+
+.creative{
+border-top-color:#f39c12;
+}
+.creative i, .creative a{
+color:#f39c12;
+}
+
+.trade{
+border-top-color:#27ae60;
+}
+.trade i, .trade a{
+color:#27ae60;
 }
 
 /* FOOTER */
@@ -165,8 +207,7 @@ margin-top:50px;
 <div class="logo">EMAGES <span>GROUP</span></div>
 <nav>
 <a href="#">Inicio</a>
-<a href="#">Nosotros</a>
-<a href="#">Divisiones</a>
+<a href="#divisiones">Divisiones</a>
 <a href="#">Blog</a>
 <a href="#" class="btn-header">Contáctanos</a>
 </nav>
@@ -176,35 +217,39 @@ margin-top:50px;
 <div class="hero-content">
 <h1>Bienvenido a EMAGES GROUP</h1>
 <p>Impulsando el crecimiento y la innovación</p>
-<a href="#" class="btn">Conoce más</a>
+<a href="#divisiones" class="btn">Conoce más</a>
 </div>
 </section>
 
-<section class="section">
+<section class="section" id="divisiones">
 <h2>Nuestras Divisiones</h2>
 <p>Soluciones integrales para educación, talento, marketing y comercio</p>
 
 <div class="grid">
 
-<div class="card">
+<div class="card academy">
+<i class="fa-solid fa-graduation-cap"></i>
 <h3>Emages Academy</h3>
 <p>Educación & Capacitación. Programas innovadores para el desarrollo profesional.</p>
 <a href="#">Leer más ></a>
 </div>
 
-<div class="card">
+<div class="card talent">
+<i class="fa-solid fa-user-tie"></i>
 <h3>Emages Talent</h3>
 <p>Modelaje & Imagen. Agencia especializada en desarrollo de talento.</p>
 <a href="#">Leer más ></a>
 </div>
 
-<div class="card">
+<div class="card creative">
+<i class="fa-solid fa-chart-line"></i>
 <h3>Emages Creative</h3>
 <p>Marketing & Publicidad. Estrategias digitales y posicionamiento de marca.</p>
 <a href="#">Leer más ></a>
 </div>
 
-<div class="card">
+<div class="card trade">
+<i class="fa-solid fa-globe"></i>
 <h3>Emages Trade</h3>
 <p>Comercio & Importaciones. Soluciones estratégicas para expansión global.</p>
 <a href="#">Leer más ></a>
