@@ -3,200 +3,167 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Emages Group</title>
+<title>EMAGESGROUP</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins', sans-serif;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f5f6f8;
-color:#333;
+background:#ffffff;
+color:#1a1a1a;
 }
 
-/* HEADER */
 header{
-background:white;
-padding:20px 60px;
+position:fixed;
+width:100%;
+top:0;
+background:#0F2B5B;
+padding:15px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.05);
-position:fixed;
-width:100%;
 z-index:1000;
 }
 
-.logo{
-font-size:24px;
-font-weight:700;
-}
-
-.logo span{
-color:#f39c12;
-}
-
-nav a{
-margin-left:30px;
-text-decoration:none;
-color:#444;
-font-weight:500;
-}
-
-.btn-header{
-background:#f39c12;
-color:white;
-padding:10px 20px;
-border-radius:25px;
-}
-
-/* HERO */
-.hero{
-height:90vh;
-background:url('https://images.unsplash.com/photo-1497366216548-37526070297c') center/cover no-repeat;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-padding:20px;
-}
-
-.hero::after{
-content:"";
-position:absolute;
-width:100%;
-height:100%;
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(2px);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:800px;
-margin-top:80px;
-}
-
-.hero h1{
-font-size:48px;
-margin-bottom:15px;
-}
-
-.hero p{
+header h1{
+color:#fff;
 font-size:20px;
-margin-bottom:25px;
-}
-
-.btn{
-background:#f39c12;
-color:white;
-padding:14px 30px;
-border-radius:30px;
-text-decoration:none;
 font-weight:600;
 }
 
-/* SECCION */
-.section{
-padding:120px 60px 80px 60px;
+nav a{
+color:#fff;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
+padding:0 10%;
+background:linear-gradient(135deg,#ffffff 60%,#eef3ff 100%);
 }
 
-.section h2{
-font-size:32px;
-margin-bottom:15px;
+.hero h2{
+font-size:36px;
+font-weight:700;
+margin-bottom:20px;
+color:#0F2B5B;
 }
 
-.section p{
-margin-bottom:40px;
-color:#666;
+.hero span{
+display:block;
+font-weight:400;
+font-size:18px;
+margin-top:10px;
+color:#444;
+}
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+padding:12px 25px;
+border-radius:30px;
+border:none;
+cursor:pointer;
+font-size:14px;
+margin:10px;
+transition:0.3s;
+}
+
+.btn-primary{
+background:#0F2B5B;
+color:#fff;
+}
+
+.btn-primary:hover{
+background:#1c3f85;
+}
+
+section{
+padding:100px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+font-size:28px;
+font-weight:600;
+color:#0F2B5B;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:30px;
 }
 
 .card{
-background:white;
 padding:30px;
 border-radius:15px;
-box-shadow:0 8px 20px rgba(0,0,0,0.05);
-text-align:left;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
 transition:0.3s;
-border-top:6px solid transparent;
+background:#fff;
 }
 
 .card:hover{
 transform:translateY(-8px);
 }
 
-.card i{
-font-size:30px;
-margin-bottom:15px;
-}
-
 .card h3{
-margin-bottom:10px;
+margin-top:15px;
+font-size:18px;
 }
 
 .card p{
-color:#666;
-margin-bottom:15px;
+font-size:14px;
+margin-top:10px;
+color:#555;
 }
 
-.card a{
-font-weight:600;
-text-decoration:none;
+.icon{
+width:40px;
+height:40px;
 }
 
-/* COLORES POR DIVISION */
+/* Colores por división */
+.consulting{border-top:5px solid #0F2B5B;}
+.talent{border-top:5px solid #2e8b57;}
+.academy{border-top:5px solid #f39c12;}
+.tech{border-top:5px solid #5B3E96;}
+.marketing{border-top:5px solid #c0392b;}
 
-.academy{
-border-top-color:#16a085;
-}
-.academy i, .academy a{
-color:#16a085;
-}
-
-.talent{
-border-top-color:#c0392b;
-}
-.talent i, .talent a{
-color:#c0392b;
-}
-
-.creative{
-border-top-color:#f39c12;
-}
-.creative i, .creative a{
-color:#f39c12;
-}
-
-.trade{
-border-top-color:#27ae60;
-}
-.trade i, .trade a{
-color:#27ae60;
-}
-
-/* FOOTER */
-footer{
-background:#222;
-color:white;
+.model{
+background:#f5f7fa;
 text-align:center;
-padding:30px;
-margin-top:50px;
+}
+
+footer{
+background:#0F2B5B;
+color:#fff;
+text-align:center;
+padding:40px 8%;
+}
+
+footer p{
+font-size:14px;
+margin-top:10px;
 }
 </style>
 </head>
@@ -204,63 +171,94 @@ margin-top:50px;
 <body>
 
 <header>
-<div class="logo">EMAGES <span>GROUP</span></div>
+<h1>EMAGESGROUP</h1>
 <nav>
 <a href="#">Inicio</a>
 <a href="#divisiones">Divisiones</a>
-<a href="#">Blog</a>
-<a href="#" class="btn-header">Contáctanos</a>
+<a href="#modelo">Modelo</a>
+<a href="#contacto">Contacto</a>
 </nav>
 </header>
 
 <section class="hero">
-<div class="hero-content">
-<h1>Bienvenido a EMAGES GROUP</h1>
-<p>Impulsando el crecimiento y la innovación</p>
-<a href="#divisiones" class="btn">Conoce más</a>
+<h2>
+Estrategia · Talento · Tecnología<br>
+para Organizaciones en Evolución.
+<span>Soluciones empresariales integrales adaptadas a cada organización.</span>
+</h2>
+
+<div class="buttons">
+<button class="btn btn-primary" onclick="document.getElementById('divisiones').scrollIntoView({behavior:'smooth'})">
+Conoce nuestras divisiones
+</button>
 </div>
 </section>
 
-<section class="section" id="divisiones">
-<h2>Nuestras Divisiones</h2>
-<p>Soluciones integrales para educación, talento, marketing y comercio</p>
+<section id="divisiones">
+<h2 class="section-title">Nuestras Divisiones Especializadas</h2>
 
 <div class="grid">
 
-<div class="card academy">
-<i class="fa-solid fa-graduation-cap"></i>
-<h3>Emages Academy</h3>
-<p>Educación & Capacitación. Programas innovadores para el desarrollo profesional.</p>
-<a href="#">Leer más ></a>
+<div class="card consulting">
+<i data-lucide="bar-chart-3" class="icon"></i>
+<h3>EMAGES Consulting</h3>
+<p>Planeamiento estratégico, asesoría tributaria, financiera y societaria.</p>
 </div>
 
 <div class="card talent">
-<i class="fa-solid fa-user-tie"></i>
-<h3>Emages Talent</h3>
-<p>Modelaje & Imagen. Agencia especializada en desarrollo de talento.</p>
-<a href="#">Leer más ></a>
+<i data-lucide="users" class="icon"></i>
+<h3>EMAGES Talent</h3>
+<p>Gestión integral de recursos humanos y desarrollo organizacional.</p>
 </div>
 
-<div class="card creative">
-<i class="fa-solid fa-chart-line"></i>
-<h3>Emages Creative</h3>
-<p>Marketing & Publicidad. Estrategias digitales y posicionamiento de marca.</p>
-<a href="#">Leer más ></a>
+<div class="card academy">
+<i data-lucide="graduation-cap" class="icon"></i>
+<h3>EMAGES Academy</h3>
+<p>Capacitación empresarial, diplomados y formación profesional.</p>
 </div>
 
-<div class="card trade">
-<i class="fa-solid fa-globe"></i>
-<h3>Emages Trade</h3>
-<p>Comercio & Importaciones. Soluciones estratégicas para expansión global.</p>
-<a href="#">Leer más ></a>
+<div class="card tech">
+<i data-lucide="cpu" class="icon"></i>
+<h3>EMAGES Tech</h3>
+<p>Soluciones tecnológicas, desarrollo web y software empresarial.</p>
 </div>
 
+<div class="card marketing">
+<i data-lucide="megaphone" class="icon"></i>
+<h3>EMAGES Marketing & Events</h3>
+<p>Publicidad estratégica y producción integral de eventos.</p>
+</div>
+
+</div>
+</section>
+
+<section id="modelo" class="model">
+<h2 class="section-title">Nuestro Modelo Integral</h2>
+<p>
+Centralizamos visión estratégica y descentralizamos ejecución especializada a través de nuestras divisiones.
+Un solo grupo, múltiples soluciones coordinadas.
+</p>
+</section>
+
+<section id="contacto">
+<h2 class="section-title">Contacto</h2>
+<div style="max-width:500px;margin:auto;">
+<input type="text" placeholder="Nombre" style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc;">
+<input type="email" placeholder="Correo" style="width:100%;padding:12px;margin-bottom:15px;border-radius:8px;border:1px solid #ccc;">
+<textarea placeholder="Mensaje" style="width:100%;padding:12px;height:120px;border-radius:8px;border:1px solid #ccc;"></textarea>
+<button class="btn btn-primary" style="width:100%;margin-top:15px;">Enviar consulta</button>
 </div>
 </section>
 
 <footer>
-© 2026 Emages Group. Todos los derechos reservados.
+<h3>EMAGESGROUP</h3>
+<p>Estrategia · Talento · Tecnología para Organizaciones en Evolución.</p>
+<p>© 2026 EMAGESGROUP E.I.R.L. Todos los derechos reservados.</p>
 </footer>
+
+<script>
+lucide.createIcons();
+</script>
 
 </body>
 </html>
