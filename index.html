@@ -9,6 +9,14 @@
 <script src="https://unpkg.com/lucide@latest"></script>
 
 <style>
+:root{
+--primary:#2F3E5C;
+--accent:#F39C12;
+--light:#F5F7FA;
+--text-dark:#2C2C2C;
+--text-soft:#6B7280;
+}
+
 *{
 margin:0;
 padding:0;
@@ -19,47 +27,52 @@ scroll-behavior:smooth;
 
 body{
 background:#ffffff;
-color:#1a1a1a;
+color:var(--text-dark);
 line-height:1.6;
 overflow-x:hidden;
 }
+
+/* HEADER */
 
 header{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(15,43,91,0.95);
-backdrop-filter:blur(8px);
+background:#ffffff;
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
+box-shadow:0 2px 15px rgba(0,0,0,0.05);
 }
 
 header h1{
-color:#fff;
+color:var(--primary);
 font-size:18px;
-font-weight:600;
+font-weight:700;
 letter-spacing:1px;
 }
 
 nav a{
-color:#fff;
+color:#444;
 text-decoration:none;
 margin-left:25px;
 font-size:14px;
-opacity:0.85;
 transition:0.3s;
 }
 
 nav a:hover{
-opacity:1;
+color:var(--accent);
 }
+
+/* SECTIONS */
 
 section{
 padding:120px 8%;
 }
+
+/* HERO */
 
 .hero{
 height:100vh;
@@ -69,13 +82,13 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:0 10%;
-background:linear-gradient(135deg,#ffffff 50%,#f2f6ff 100%);
+background:linear-gradient(to bottom,var(--light),#ffffff);
 }
 
 .hero h2{
-font-size:42px;
+font-size:48px;
 font-weight:700;
-color:#0F2B5B;
+color:var(--primary);
 max-width:900px;
 }
 
@@ -84,11 +97,11 @@ display:block;
 font-weight:400;
 font-size:18px;
 margin-top:20px;
-color:#444;
+color:var(--text-soft);
 }
 
 .btn{
-padding:14px 28px;
+padding:14px 30px;
 border-radius:30px;
 border:none;
 cursor:pointer;
@@ -98,23 +111,27 @@ transition:0.3s;
 }
 
 .btn-primary{
-background:#0F2B5B;
+background:var(--accent);
 color:#fff;
-box-shadow:0 8px 25px rgba(15,43,91,0.25);
+box-shadow:0 8px 20px rgba(243,156,18,0.3);
 }
 
 .btn-primary:hover{
-background:#1c3f85;
-transform:translateY(-4px);
+background:#e67e22;
+transform:translateY(-3px);
 }
+
+/* TITLES */
 
 .section-title{
 text-align:center;
 margin-bottom:70px;
-font-size:30px;
+font-size:32px;
 font-weight:600;
-color:#0F2B5B;
+color:var(--primary);
 }
+
+/* GRID */
 
 .grid{
 display:grid;
@@ -122,18 +139,20 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:35px;
 }
 
-/* Cards clickeables */
+/* CARDS */
+
 .card{
 padding:35px;
-border-radius:18px;
-box-shadow:0 15px 35px rgba(0,0,0,0.06);
-transition:0.4s;
-background:#fff;
-opacity:0;
-transform:translateY(40px);
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.05);
+transition:0.3s;
+background:#ffffff;
+border:1px solid #f0f0f0;
 text-decoration:none;
 color:inherit;
 display:block;
+opacity:0;
+transform:translateY(40px);
 }
 
 .card.visible{
@@ -142,40 +161,40 @@ transform:translateY(0);
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.08);
 }
 
 .card h3{
 margin-top:20px;
 font-size:18px;
+font-weight:600;
+color:var(--primary);
 }
 
 .card p{
 font-size:14px;
 margin-top:12px;
-color:#555;
+color:var(--text-soft);
 }
 
 .icon{
 width:45px;
 height:45px;
 stroke-width:1.5;
+color:var(--accent);
 }
 
-/* Colores divisiones */
-.academy{border-top:5px solid #f39c12;}
-.talent{border-top:5px solid #2e8b57;}
-.creative{border-top:5px solid #c0392b;}
-.trade{border-top:5px solid #5B3E96;}
-.rrhh{border-top:5px solid #0F2B5B;}
-.corporate{border-top:5px solid #16a085;}
+/* LIGHT SECTION */
 
 .light-bg{
-background:#f7f9fc;
+background:var(--light);
 }
 
+/* CTA */
+
 .cta{
-background:#0F2B5B;
+background:var(--primary);
 color:#fff;
 text-align:center;
 }
@@ -189,8 +208,20 @@ margin-top:15px;
 opacity:0.9;
 }
 
+.cta .btn-primary{
+background:#fff;
+color:var(--primary);
+box-shadow:none;
+}
+
+.cta .btn-primary:hover{
+background:#f0f0f0;
+}
+
+/* FOOTER */
+
 footer{
-background:#081c3a;
+background:#111827;
 color:#fff;
 text-align:center;
 padding:50px 8%;
@@ -201,19 +232,27 @@ font-size:13px;
 margin-top:10px;
 opacity:0.8;
 }
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+.hero h2{
+font-size:34px;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>EMAGESGROUP</h1>
+<h1>EMAGES GROUP</h1>
 <nav>
 <a href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="#divisiones">Divisiones</a>
 <a href="#impacto">Impacto</a>
-<a href="#network">Red Internacional</a>
+<a href="#network">Red</a>
 <a href="#contacto">Contacto</a>
 </nav>
 </header>
@@ -222,7 +261,7 @@ opacity:0.8;
 <h2>
 Estrategia · Talento · Tecnología<br>
 para Organizaciones en Evolución.
-<span>Soluciones empresariales integrales adaptadas a la realidad y objetivos de cada organización.</span>
+<span>Holding empresarial que integra educación, talento, marketing, comercio y gestión corporativa.</span>
 </h2>
 
 <button class="btn btn-primary" onclick="document.getElementById('divisiones').scrollIntoView({behavior:'smooth'})">
@@ -235,94 +274,69 @@ Conoce nuestras divisiones
 
 <div class="grid">
 
-<a href="academy.html" class="card academy">
+<a href="academy.html" class="card">
 <i data-lucide="graduation-cap" class="icon"></i>
 <h3>EMAGES Academy</h3>
-<p>Capacitaciones, cursos y talleres de formación profesional.</p>
+<p>Formación, capacitación profesional y programas especializados.</p>
 </a>
 
-<a href="talent.html" class="card talent">
+<a href="talent.html" class="card">
 <i data-lucide="sparkles" class="icon"></i>
 <h3>EMAGES Talent</h3>
-<p>Modelaje, imagen y formación para anfitrionas profesionales.</p>
+<p>Modelaje, imagen profesional y desarrollo de talento.</p>
 </a>
 
-<a href="creative.html" class="card creative">
+<a href="creative.html" class="card">
 <i data-lucide="palette" class="icon"></i>
 <h3>EMAGES Creative</h3>
-<p>Community manager, publicidad y diseño de marca.</p>
+<p>Marketing estratégico, publicidad y posicionamiento digital.</p>
 </a>
 
-<a href="trade.html" class="card trade">
+<a href="trade.html" class="card">
 <i data-lucide="shopping-cart" class="icon"></i>
 <h3>EMAGES Trade</h3>
-<p>Comercialización y distribución de productos.</p>
+<p>Comercialización, importaciones y expansión empresarial.</p>
 </a>
 
-<a href="rrhh.html" class="card rrhh">
+<a href="rrhh.html" class="card">
 <i data-lucide="users" class="icon"></i>
 <h3>EMAGES RRHH</h3>
-<p>Reclutamiento, selección y evaluación laboral.</p>
+<p>Reclutamiento, selección y gestión del talento humano.</p>
 </a>
 
-<a href="corporate.html" class="card corporate">
+<a href="corporate.html" class="card">
 <i data-lucide="calculator" class="icon"></i>
 <h3>EMAGES Corporate</h3>
-<p>Planillas, contabilidad y gestión financiera.</p>
+<p>Contabilidad, planillas y gestión financiera integral.</p>
 </a>
 
 </div>
 </section>
 
 <section id="impacto" class="light-bg">
-<h2 class="section-title">Impacto & Compromiso Social</h2>
+<h2 class="section-title">Impacto & Compromiso</h2>
 <div class="grid">
 <div class="card">
 <i data-lucide="heart-handshake" class="icon"></i>
-<h3>Programas Gratuitos</h3>
-<p>Capacitaciones abiertas para emprendedores y profesionales.</p>
+<h3>Programas Sociales</h3>
+<p>Iniciativas de capacitación y apoyo a emprendedores.</p>
 </div>
 <div class="card">
 <i data-lucide="book-open" class="icon"></i>
-<h3>Charlas Empresariales</h3>
-<p>Promoción de cultura digital y liderazgo organizacional.</p>
+<h3>Formación Empresarial</h3>
+<p>Charlas y talleres para el desarrollo organizacional.</p>
 </div>
 <div class="card">
 <i data-lucide="globe" class="icon"></i>
-<h3>Proyección Nacional</h3>
-<p>Construcción de red empresarial con visión sostenible.</p>
-</div>
-</div>
-</section>
-
-<section id="network">
-<h2 class="section-title">EMAGESGLOBAL NETWORK</h2>
-<p style="text-align:center;max-width:850px;margin:auto;margin-bottom:60px;">
-Red Empresarial y Profesional Internacional orientada a la integración de especialistas y líderes empresariales para compartir conocimiento y visión estratégica.
-</p>
-
-<div class="grid">
-<div class="card">
-<i data-lucide="video" class="icon"></i>
-<h3>Encuentros Virtuales</h3>
-<p>Espacios de intercambio profesional internacional.</p>
-</div>
-<div class="card">
-<i data-lucide="users" class="icon"></i>
-<h3>Comunidad Global</h3>
-<p>Conectamos talento y liderazgo empresarial.</p>
-</div>
-<div class="card">
-<i data-lucide="award" class="icon"></i>
-<h3>Reconocimiento</h3>
-<p>Constancias de participación como ponente invitado.</p>
+<h3>Proyección Internacional</h3>
+<p>Conexión estratégica con red empresarial global.</p>
 </div>
 </div>
 </section>
 
 <section class="cta">
 <h2>Construyamos el crecimiento de tu organización</h2>
-<p>Agenda una asesoría estratégica o participa en nuestros programas.</p>
+<p>Agenda una asesoría estratégica con nuestro equipo.</p>
 <button class="btn btn-primary">Solicitar asesoría</button>
 </section>
 
@@ -337,7 +351,7 @@ Red Empresarial y Profesional Internacional orientada a la integración de espec
 </section>
 
 <footer>
-<h3>EMAGESGROUP</h3>
+<h3>EMAGES GROUP</h3>
 <p>Estrategia · Talento · Tecnología para Organizaciones en Evolución.</p>
 <p>© 2026 EMAGESGROUP E.I.R.L. Todos los derechos reservados.</p>
 </footer>
