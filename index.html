@@ -122,6 +122,7 @@ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:35px;
 }
 
+/* Cards clickeables */
 .card{
 padding:35px;
 border-radius:18px;
@@ -130,6 +131,9 @@ transition:0.4s;
 background:#fff;
 opacity:0;
 transform:translateY(40px);
+text-decoration:none;
+color:inherit;
+display:block;
 }
 
 .card.visible{
@@ -205,7 +209,7 @@ opacity:0.8;
 <header>
 <h1>EMAGESGROUP</h1>
 <nav>
-<a href="#">Inicio</a>
+<a href="index.html">Inicio</a>
 <a href="nosotros.html">Nosotros</a>
 <a href="#divisiones">Divisiones</a>
 <a href="#impacto">Impacto</a>
@@ -231,98 +235,88 @@ Conoce nuestras divisiones
 
 <div class="grid">
 
-<div class="card academy">
+<a href="academy.html" class="card academy">
 <i data-lucide="graduation-cap" class="icon"></i>
 <h3>EMAGES Academy</h3>
 <p>Capacitaciones, cursos y talleres de formación profesional.</p>
-</div>
+</a>
 
-<div class="card talent">
+<a href="talent.html" class="card talent">
 <i data-lucide="sparkles" class="icon"></i>
 <h3>EMAGES Talent</h3>
 <p>Modelaje, imagen y formación para anfitrionas profesionales.</p>
-</div>
+</a>
 
-<div class="card creative">
+<a href="creative.html" class="card creative">
 <i data-lucide="palette" class="icon"></i>
 <h3>EMAGES Creative</h3>
-<p>Community manager, publicidad, diseño de marca y producción gráfica.</p>
-</div>
+<p>Community manager, publicidad y diseño de marca.</p>
+</a>
 
-<div class="card trade">
+<a href="trade.html" class="card trade">
 <i data-lucide="shopping-cart" class="icon"></i>
 <h3>EMAGES Trade</h3>
-<p>Comercialización y distribución de productos al por mayor y menor.</p>
-</div>
+<p>Comercialización y distribución de productos.</p>
+</a>
 
-<div class="card rrhh">
+<a href="rrhh.html" class="card rrhh">
 <i data-lucide="users" class="icon"></i>
 <h3>EMAGES RRHH</h3>
-<p>Reclutamiento, selección de personal y evaluación laboral.</p>
-</div>
+<p>Reclutamiento, selección y evaluación laboral.</p>
+</a>
 
-<div class="card corporate">
+<a href="corporate.html" class="card corporate">
 <i data-lucide="calculator" class="icon"></i>
 <h3>EMAGES Corporate</h3>
-<p>Planillas, contabilidad y gestión financiera empresarial.</p>
-</div>
+<p>Planillas, contabilidad y gestión financiera.</p>
+</a>
 
 </div>
 </section>
 
 <section id="impacto" class="light-bg">
 <h2 class="section-title">Impacto & Compromiso Social</h2>
-
 <div class="grid">
-
 <div class="card">
 <i data-lucide="heart-handshake" class="icon"></i>
 <h3>Programas Gratuitos</h3>
 <p>Capacitaciones abiertas para emprendedores y profesionales.</p>
 </div>
-
 <div class="card">
 <i data-lucide="book-open" class="icon"></i>
 <h3>Charlas Empresariales</h3>
-<p>Promoción de cultura digital, gestión y liderazgo organizacional.</p>
+<p>Promoción de cultura digital y liderazgo organizacional.</p>
 </div>
-
 <div class="card">
 <i data-lucide="globe" class="icon"></i>
 <h3>Proyección Nacional</h3>
-<p>Construcción de una red empresarial con visión sostenible.</p>
+<p>Construcción de red empresarial con visión sostenible.</p>
 </div>
-
 </div>
 </section>
 
 <section id="network">
 <h2 class="section-title">EMAGESGLOBAL NETWORK</h2>
-
 <p style="text-align:center;max-width:850px;margin:auto;margin-bottom:60px;">
-Red Empresarial y Profesional Internacional orientada a la integración de especialistas y líderes empresariales para compartir conocimiento y visión estratégica en un entorno colaborativo.
+Red Empresarial y Profesional Internacional orientada a la integración de especialistas y líderes empresariales para compartir conocimiento y visión estratégica.
 </p>
 
 <div class="grid">
-
 <div class="card">
 <i data-lucide="video" class="icon"></i>
-<h3>Encuentros Virtuales Internacionales</h3>
-<p>Espacios de intercambio profesional con participación nacional e internacional.</p>
+<h3>Encuentros Virtuales</h3>
+<p>Espacios de intercambio profesional internacional.</p>
 </div>
-
 <div class="card">
 <i data-lucide="users" class="icon"></i>
-<h3>Comunidad Profesional Global</h3>
-<p>Conectamos talento y liderazgo empresarial en una red colaborativa.</p>
+<h3>Comunidad Global</h3>
+<p>Conectamos talento y liderazgo empresarial.</p>
 </div>
-
 <div class="card">
 <i data-lucide="award" class="icon"></i>
-<h3>Reconocimiento Institucional</h3>
+<h3>Reconocimiento</h3>
 <p>Constancias de participación como ponente invitado.</p>
 </div>
-
 </div>
 </section>
 
