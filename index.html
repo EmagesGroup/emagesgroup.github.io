@@ -10,10 +10,11 @@
 
 <style>
 :root{
---primary:#1E2A44; /* Azul premium más elegante */
---primary-soft:#243556;
+--primary:#0F1C2E;
+--primary-deep:#0A1422;
 --accent:#F39C12;
---light:#F4F6F9;
+--accent-soft:#E67E22;
+--light:#F5F7FA;
 --text-soft:#6B7280;
 }
 
@@ -26,8 +27,8 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#fff;
-color:#2C2C2C;
+background:#ffffff;
+color:#1F2937;
 line-height:1.6;
 overflow-x:hidden;
 }
@@ -38,37 +39,54 @@ header{
 position:fixed;
 width:100%;
 top:0;
-background:rgba(255,255,255,0.95);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.96);
+backdrop-filter:blur(14px);
 padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
-box-shadow:0 2px 20px rgba(0,0,0,0.05);
+box-shadow:0 4px 30px rgba(0,0,0,0.04);
 }
 
 header h1{
 color:var(--primary);
 font-size:18px;
 font-weight:700;
-letter-spacing:1px;
+letter-spacing:1.5px;
 }
 
 nav a{
-color:#444;
+color:#374151;
 text-decoration:none;
-margin-left:25px;
+margin-left:28px;
 font-size:14px;
+font-weight:500;
+position:relative;
+transition:0.3s ease;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+bottom:-6px;
+left:0;
+width:0;
+height:2px;
+background:var(--accent);
 transition:0.3s ease;
 }
 
 nav a:hover{
-color:var(--accent);
+color:var(--primary);
+}
+
+nav a:hover::after{
+width:100%;
 }
 
 .lang-btn{
-margin-left:20px;
+margin-left:25px;
 cursor:pointer;
 font-size:13px;
 color:var(--primary);
@@ -87,7 +105,7 @@ text-align:center;
 padding:0 10%;
 color:#fff;
 background:
-linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.55)),
+linear-gradient(rgba(10,20,34,0.85),rgba(15,28,46,0.85)),
 url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
 background-size:cover;
 background-position:center;
@@ -95,39 +113,43 @@ background-attachment:fixed;
 }
 
 .hero h2{
-font-size:48px;
+font-size:52px;
 font-weight:600;
 max-width:900px;
-animation:fadeUp 1.2s ease forwards;
+line-height:1.2;
 }
 
 .hero span{
 display:block;
 font-weight:300;
-font-size:18px;
-margin-top:20px;
+font-size:19px;
+margin-top:25px;
 opacity:0.9;
 }
 
+/* BOTONES */
+
 .btn{
-padding:14px 32px;
-border-radius:30px;
+padding:15px 36px;
+border-radius:40px;
 border:none;
 cursor:pointer;
 font-size:14px;
-margin-top:35px;
+font-weight:600;
+margin-top:40px;
 transition:all 0.4s ease;
+letter-spacing:0.5px;
 }
 
 .btn-primary{
 background:var(--accent);
 color:#fff;
-box-shadow:0 8px 25px rgba(243,156,18,0.3);
+box-shadow:0 12px 35px rgba(243,156,18,0.35);
 }
 
 .btn-primary:hover{
-transform:translateY(-3px);
-background:#e67e22;
+background:var(--accent-soft);
+transform:translateY(-4px);
 }
 
 /* SECTIONS */
@@ -138,8 +160,8 @@ padding:120px 8%;
 
 .section-title{
 text-align:center;
-margin-bottom:70px;
-font-size:32px;
+margin-bottom:80px;
+font-size:34px;
 font-weight:600;
 color:var(--primary);
 }
@@ -149,16 +171,16 @@ color:var(--primary);
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:35px;
+gap:40px;
 }
 
 /* CARDS */
 
 .card{
-padding:40px;
-border-radius:22px;
-background:#fff;
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
+padding:45px;
+border-radius:26px;
+background:#ffffff;
+box-shadow:0 20px 60px rgba(0,0,0,0.05);
 transition:all 0.6s cubic-bezier(.19,1,.22,1);
 opacity:0;
 transform:translateY(40px);
@@ -170,25 +192,25 @@ transform:translateY(0);
 }
 
 .card:hover{
-transform:translateY(-10px);
-box-shadow:0 25px 60px rgba(0,0,0,0.1);
+transform:translateY(-12px);
+box-shadow:0 30px 80px rgba(0,0,0,0.08);
 }
 
 .card h3{
-margin-top:20px;
-font-size:18px;
+margin-top:22px;
+font-size:19px;
 color:var(--primary);
 }
 
 .card p{
 font-size:14px;
-margin-top:12px;
+margin-top:14px;
 color:var(--text-soft);
 }
 
 .icon{
-width:45px;
-height:45px;
+width:46px;
+height:46px;
 stroke-width:1.5;
 color:var(--accent);
 }
@@ -201,60 +223,61 @@ background:var(--light);
 }
 
 .contacto h3{
-font-size:32px;
+font-size:36px;
 color:var(--primary);
-margin-bottom:20px;
+margin-bottom:25px;
 }
 
 .contacto p{
-max-width:700px;
-margin:0 auto 30px;
+max-width:750px;
+margin:0 auto 35px;
 color:var(--text-soft);
+font-size:15px;
 }
 
-/* BOTON WHATSAPP */
+/* WHATSAPP */
 
 .btn-whatsapp{
 display:inline-block;
 background:#25D366;
 color:#fff !important;
-padding:15px 35px;
-border-radius:40px;
+padding:16px 40px;
+border-radius:50px;
 font-size:15px;
 font-weight:600;
 text-decoration:none;
 transition:0.3s ease;
-box-shadow:0 8px 25px rgba(37,211,102,0.3);
+box-shadow:0 10px 30px rgba(37,211,102,0.35);
 }
 
 .btn-whatsapp:hover{
 background:#1ebe5d;
-transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
-/* FOOTER PREMIUM */
+/* FOOTER */
 
 footer{
-background:linear-gradient(135deg,var(--primary),var(--primary-soft));
+background:linear-gradient(135deg,var(--primary),var(--primary-deep));
 color:#fff;
-padding:80px 8%;
+padding:90px 8%;
 }
 
 footer a{
 display:block;
 color:#ffffff;
 text-decoration:none;
-margin-bottom:8px;
+margin-bottom:10px;
 transition:0.3s ease;
 }
 
 footer a:hover{
-color:var(--accent); /* Blanco a naranja */
-transform:translateX(4px);
+color:var(--accent);
+transform:translateX(6px);
 }
 
 footer h4{
-margin-bottom:20px;
+margin-bottom:25px;
 color:var(--accent);
 }
 
@@ -262,7 +285,16 @@ footer h3{
 margin-bottom:20px;
 }
 
+footer p{
+font-size:14px;
+opacity:0.85;
+}
+
 /* ANIMATION */
+
+.card{
+animation:fadeUp 0.8s ease forwards;
+}
 
 @keyframes fadeUp{
 from{opacity:0; transform:translateY(30px);}
@@ -339,9 +371,9 @@ Explorar Divisiones
 </section>
 
 <section class="contacto" id="contacto">
-<h3>Solicita una Asesoría Personalizada</h3>
+<h3>Construyamos el crecimiento estratégico de tu organización</h3>
 <p>
-Conversemos sobre tus objetivos y diseñemos una estrategia clara para tu crecimiento. Nuestro equipo está listo para ayudarte.
+Agenda una conversación con nuestro equipo y diseñemos una estrategia sólida, medible y orientada a resultados.
 </p>
 
 <a class="btn-whatsapp"
@@ -354,68 +386,56 @@ Solicitar Asesoría por WhatsApp
 
 <footer>
 
-  <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:50px; max-width:1200px; margin:auto;">
+<div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:50px; max-width:1200px; margin:auto;">
     
-    <div>
-      <h3>EMAGES GROUP</h3>
-      <p style="font-size:14px; line-height:1.7; opacity:0.85;">
-        EMAGES GROUP es un grupo empresarial enfocado en soluciones integrales en educación, talento, marketing, comercio y gestión corporativa.
-      </p>
-      <p style="margin-top:15px; font-size:14px;">
-        🌐 <a href="https://emagesgroup.com">emagesgroup.com</a>
-        ✉️ <a href="mailto:hola@emagesgroup.com">hola@emagesgroup.com</a>
-      </p>
-    </div>
+<div>
+<h3>EMAGES GROUP</h3>
+<p>
+EMAGES GROUP es un grupo empresarial enfocado en soluciones integrales en educación, talento, marketing, comercio y gestión corporativa.
+</p>
+<p style="margin-top:15px; font-size:14px;">
+🌐 <a href="https://emagesgroup.com" style="color:#F39C12; text-decoration:none;">emagesgroup.com</a><br>
+✉️ <a href="mailto:hola@emagesgroup.com" style="color:#F39C12; text-decoration:none;">hola@emagesgroup.com</a>
+</p>
 
-    <div>
-      <h4>Nuestras Áreas</h4>
-      <a href="https://academy.emagesgroup.com/">EMAGES Academy</a>
-      <a href="#">EMAGES Modeling</a>
-      <a href="#">EMAGES Marketing</a>
-      <a href="#">EMAGES Commerce</a>
-      <a href="#">EMAGES Consulting</a>
-    </div>
+</div>
 
-    <div>
-      <h4>Nuestros Valores</h4>
-      <a href="#">Excelencia en el servicio</a>
-      <a href="#">Confidencialidad</a>
-      <a href="#">Trabajo en equipo</a>
-      <a href="#">Responsabilidad</a>
-      <a href="#">Confianza</a>
-    </div>
+<div>
+<h4>Nuestras Áreas</h4>
+<a href="https://academy.emagesgroup.com">EMAGES Academy</a>
+<a href="#">EMAGES Modeling</a>
+<a href="#">EMAGES Marketing</a>
+<a href="#">EMAGES Commerce</a>
+<a href="#">EMAGES Consulting</a>
+</div>
 
-    <div>
-      <h4>Síguenos</h4>
-      <a href="https://www.facebook.com/emagesgroup.pe">Facebook</a>
-      <a href="https://www.linkedin.com/company/emagesgroup">LinkedIn</a>
-      <a href="https://www.tiktok.com/@emagesgroup">TikTok</a>
-      <a href="https://www.youtube.com/@EmagesGroup">YouTube</a>
-    </div>
+<div>
+<h4>Nuestros Valores</h4>
+<a href="#">Excelencia</a>
+<a href="#">Confidencialidad</a>
+<a href="#">Responsabilidad</a>
+<a href="#">Confianza</a>
+</div>
 
-  </div>
+<div>
+<h4>Síguenos</h4>
+<a href="https://www.facebook.com/emagesgroup.pe">Facebook</a>
+<a href="https://www.linkedin.com/company/emagesgroup">LinkedIn</a>
+<a href="https://www.tiktok.com/@emagesgroup">TikTok</a>
+<a href="https://www.youtube.com/@EmagesGroup">YouTube</a>
+</div>
 
-  <div style="text-align:center; margin-top:60px; font-size:13px; opacity:0.6;">
-    EMAGES GROUP | Soluciones Integrales Empresariales © 2026 – Todos los derechos reservados
-  </div>
+</div>
+
+<div style="text-align:center; margin-top:60px; font-size:13px; opacity:0.6;">
+EMAGES GROUP | Soluciones Integrales Empresariales © 2026 – Todos los derechos reservados
+</div>
 
 </footer>
 
 <script>
 lucide.createIcons();
-
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('visible');
-}
-});
-},{threshold:0.2});
-cards.forEach(card=>observer.observe(card));
-
 let currentLang="es";
-
 function toggleLang(){
 if(currentLang==="es"){
 document.getElementById("hero-title").innerHTML=
