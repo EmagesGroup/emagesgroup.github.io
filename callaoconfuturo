@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa Callao con Futuro | Una iniciativa de EMAGES GROUP</title>
+    <meta name="description" content="Programa Callao con Futuro: Iniciativa de becas y desarrollo de habilidades de EMAGES GROUP. Formación en inglés y técnica bajo la Metodología ISA.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .smooth-scroll { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700 smooth-scroll">
+
+    <!-- ========================================== -->
+    <!-- BARRA SUPERIOR (Respaldo Corporativo + Metodología) -->
+    <!-- ========================================== -->
+    <div class="bg-slate-900 text-slate-300 text-xs py-2 hidden md:block">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
+            <span>🏢 Una iniciativa de Responsabilidad Social de <strong class="text-sky-400">EMAGES GROUP</strong></span>
+            <span>Formación bajo la <strong class="text-rose-400">Metodología ISA</strong></span>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- HEADER / NAVEGACIÓN -->
+    <!-- ========================================== -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center">
+            <!-- Logo del Programa -->
+            <div class="flex flex-col">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-rocket text-3xl text-sky-500"></i> <!-- Icono de progreso/futuro -->
+                    <span class="text-2xl font-extrabold text-slate-800">CALLAO<span class="text-rose-500">CON FUTURO</span></span>
+                </div>
+                <span class="text-[10px] text-slate-500 uppercase tracking-widest ml-10 -mt-1">Programa de EMAGES GROUP</span>
+            </div>
+            
+            <!-- Nav Desktop -->
+            <nav class="hidden md:flex space-x-8 font-semibold text-slate-600">
+                <a href="#inicio" class="hover:text-sky-500 transition">Inicio</a>
+                <a href="#metodologia" class="hover:text-sky-500 transition">Metodología ISA</a>
+                <a href="#cursos" class="hover:text-sky-500 transition">Programas</a>
+                <a href="#padres" class="hover:text-sky-500 transition">Padres</a>
+                <a href="#jovenes" class="hover:text-sky-500 transition">Jóvenes</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="https://wa.me/51999999999?text=Hola,%20quiero%20información%20sobre%20el%20Programa%20Callao%20con%20Futuro%20de%20EMAGES%20GROUP" target="_blank" class="px-6 py-2.5 bg-rose-500 text-white rounded-full font-bold hover:bg-rose-600 transition shadow-lg shadow-rose-500/30">
+                    Postula al Programa
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl text-slate-800">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========================================== -->
+    <!-- HERO SECTION -->
+    <!-- ========================================== -->
+    <section id="inicio" class="relative bg-gradient-to-br from-sky-50 via-white to-slate-50 py-20 md:py-32 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center">
+            
+            <div class="md:w-1/2 z-10 mb-12 md:mb-0">
+                <span class="inline-block px-4 py-1.5 bg-rose-100 text-rose-600 rounded-full text-sm font-bold mb-6 border border-rose-200">
+                    🚀 Convocatoria Abierta 2026 - Edición Callao
+                </span>
+                
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
+                    Impulsando el talento del Callao <br>
+                    <span class="text-sky-500">hacia un futuro sin límites</span>
+                </h1>
+                
+                <p class="text-lg text-slate-600 mb-8 max-w-lg leading-relaxed">
+                    Accede a formación en inglés y habilidades técnicas bajo la <strong>Metodología ISA</strong>. Un programa de desarrollo profesional impulsado por <strong>EMAGES GROUP</strong> para quienes quieren más de su vida.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#cursos" class="px-8 py-4 bg-rose-500 text-white rounded-xl font-bold text-lg hover:bg-rose-600 transition shadow-xl shadow-rose-500/20 text-center">
+                        Ver Programas de Beca
+                    </a>
+                    <a href="#padres" class="px-8 py-4 bg-sky-100 text-sky-700 rounded-xl font-bold text-lg hover:bg-sky-200 transition text-center">
+                        Soy Padre de Familia
+                    </a>
+                </div>
+            </div>
+
+            <div class="md:w-1/2 relative z-10">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-sky-100">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jóvenes estudiando y proyectando su futuro" class="w-full h-auto object-cover">
+                    
+                    <!-- Tarjeta de Valor del Programa -->
+                    <div class="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm p-5 rounded-2xl shadow-xl border-l-4 border-rose-500">
+                        <p class="text-xl font-extrabold text-slate-900">Programa de Becas</p>
+                        <p class="text-sm text-sky-600 font-bold uppercase tracking-wide">Metodología ISA</p>
+                        <p class="text-xs text-slate-500 mt-1">Inmersión • Simulación • Aplicación</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN METODOLOGÍA ISA -->
+    <!-- ========================================== -->
+    <section id="metodologia" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <span class="text-rose-500 font-bold tracking-wider text-sm uppercase">Nuestro Sello Académico</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">¿Por qué nuestra formación tiene valor?</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">En el <strong>Programa Callao con Futuro</strong> no solo entregamos un diploma. Formamos con la <strong>Metodología ISA</strong> para que salgas listo para el mundo laboral.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Pilar 1 -->
+                <div class="bg-slate-50 rounded-2xl p-6 shadow-lg border-t-4 border-sky-400">
+                    <div class="w-14 h-14 bg-sky-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-bullseye text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Certificación por Programa</h3>
+                    <p class="text-sm text-slate-600">Avalada por la Metodología ISA. Avanza a tu ritmo y certifica cada etapa completada.</p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bg-slate-50 rounded-2xl p-6 shadow-lg border-t-4 border-sky-500">
+                    <div class="w-14 h-14 bg-sky-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-folder-open text-2xl text-sky-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Portafolio de Evidencias</h3>
+                    <p class="text-sm text-slate-600">Proyectos prácticos reales que puedes mostrar a futuros empleadores como evidencia de tus competencias.</p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bg-slate-50 rounded-2xl p-6 shadow-lg border-t-4 border-rose-500">
+                    <div class="w-14 h-14 bg-rose-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-qrcode text-2xl text-rose-600"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Verificación Digital con QR</h3>
+                    <p class="text-sm text-slate-600">Cada certificado cuenta con código QR único para validar tus competencias laborales en cualquier parte.</p>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="bg-slate-50 rounded-2xl p-6 shadow-lg border-t-4 border-slate-700">
+                    <div class="w-14 h-14 bg-slate-200 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-route text-2xl text-slate-700"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-slate-900 mb-2">Ruta a la Certificación Oficial</h3>
+                    <p class="text-sm text-slate-600">Malla alineada a los Estándares de Competencia Laboral, preparándote para exámenes oficiales del MTPE.</p>
+                </div>
+            </div>
+
+            <!-- Explicación del Método ISA -->
+            <div class="mt-16 bg-sky-50 rounded-3xl p-8 md:p-12 border border-sky-200">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900">El Método <span class="text-sky-500">I.S.A.</span></h3>
+                    <p class="text-slate-600 mt-2">Tres pilares que transforman el aprendizaje en resultados reales</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-5xl font-extrabold text-sky-500 mb-2">I</div>
+                        <h4 class="font-bold text-slate-900 mb-2">Inmersión</h4>
+                        <p class="text-sm text-slate-600">Escenarios reales desde la primera clase. No solo teoría, sino práctica desde el día uno.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-5xl font-extrabold text-sky-500 mb-2">S</div>
+                        <h4 class="font-bold text-slate-900 mb-2">Simulación</h4>
+                        <p class="text-sm text-slate-600">Casos prácticos, role-play y software real para que vivas el entorno laboral antes de entrar a él.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="text-5xl font-extrabold text-sky-500 mb-2">A</div>
+                        <h4 class="font-bold text-slate-900 mb-2">Aplicación</h4>
+                        <p class="text-sm text-slate-600">Proyectos finales tangibles que demuestran lo que sabes hacer, no solo lo que memorizaste.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PROGRAMAS DE INGLÉS -->
+    <!-- ========================================== -->
+    <section id="cursos" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="text-sky-600 font-bold tracking-wider text-sm uppercase">Nuestra Especialidad</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-4">Programas de Inglés Disponibles</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Diseñados para cada etapa de tu vida, con enfoque comunicativo y certificación progresiva bajo la Metodología ISA.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Kids -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition border-t-4 border-sky-400 group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🧒</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Inglés Kids</h3>
+                    <p class="text-sm text-sky-600 font-semibold mb-4">7 a 12 años</p>
+                    <p class="text-slate-600 mb-6 text-sm">Aprendizaje lúdico con juegos, canciones y actividades interactivas que naturalizan el idioma.</p>
+                    <button class="w-full py-2 border border-sky-500 text-sky-600 rounded-lg hover:bg-sky-500 hover:text-white transition font-medium">Más información</button>
+                </div>
+
+                <!-- Teens -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition border-t-4 border-sky-500 group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🎒</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Inglés Teens</h3>
+                    <p class="text-sm text-sky-600 font-semibold mb-4">13 a 17 años</p>
+                    <p class="text-slate-600 mb-6 text-sm">Refuerzo escolar y preparación para el futuro con dinámica juvenil que mantiene la motivación.</p>
+                    <button class="w-full py-2 border border-sky-500 text-sky-600 rounded-lg hover:bg-sky-500 hover:text-white transition font-medium">Más información</button>
+                </div>
+
+                <!-- Adults -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition border-t-4 border-rose-500 group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">💼</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Inglés Adultos</h3>
+                    <p class="text-sm text-rose-600 font-semibold mb-4">18+ años</p>
+                    <p class="text-slate-600 mb-6 text-sm">Enfoque en inglés conversacional, laboral y de viajes. Horarios flexibles para trabajadores.</p>
+                    <button class="w-full py-2 border border-rose-500 text-rose-600 rounded-lg hover:bg-rose-500 hover:text-white transition font-medium">Más información</button>
+                </div>
+
+                <!-- Business -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition border-t-4 border-slate-700 group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition duration-300">🌍</div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-2">Business English</h3>
+                    <p class="text-sm text-slate-600 font-semibold mb-4">Profesionales</p>
+                    <p class="text-slate-600 mb-6 text-sm">Inglés especializado para negocios, presentaciones, correos y entrevistas de trabajo.</p>
+                    <button class="w-full py-2 border border-slate-700 text-slate-700 rounded-lg hover:bg-slate-700 hover:text-white transition font-medium">Más información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- PRÓXIMAMENTE (CARRERAS TÉCNICAS CORTAS) -->
+    <!-- ========================================== -->
+    <section class="py-20 bg-sky-950 text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <span class="bg-rose-500 text-white px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase shadow-lg shadow-rose-500/30">Próximamente</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold mt-4 mb-4">Ampliamos tu Horizonte Profesional</h2>
+                <p class="text-sky-200 max-w-2xl mx-auto">Reserva tu vacante y sé el primero en enterarte del lanzamiento de nuestros nuevos cursos de aprendizaje corto.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Aviación y Negocios -->
+                <div class="bg-sky-900/50 rounded-xl p-8 text-center border border-sky-800 hover:border-rose-500 transition group backdrop-blur-sm">
+                    <i class="fa-solid fa-plane-departure text-5xl text-sky-400 mb-6 group-hover:text-rose-400 group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold mb-3">Aviación y Negocios Int.</h3>
+                    <p class="text-sky-200 text-sm mb-6">Formación técnica con enfoque principal en Aviación Comercial, complementada con fundamentos de aduanas y comercio.</p>
+                    <button class="text-rose-400 font-semibold hover:text-rose-300 text-sm flex items-center justify-center mx-auto gap-2">
+                        <i class="fa-regular fa-bell"></i> Avísame cuando abra
+                    </button>
+                </div>
+
+                <!-- Administración -->
+                <div class="bg-sky-900/50 rounded-xl p-8 text-center border border-sky-800 hover:border-rose-500 transition group backdrop-blur-sm">
+                    <i class="fa-solid fa-chart-line text-5xl text-sky-400 mb-6 group-hover:text-rose-400 group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold mb-3">Asistencia Admin. y Contable</h3>
+                    <p class="text-sky-200 text-sm mb-6">Domina la gestión empresarial, tributación, funciones de cajero bancario y herramientas contables modernas.</p>
+                    <button class="text-rose-400 font-semibold hover:text-rose-300 text-sm flex items-center justify-center mx-auto gap-2">
+                        <i class="fa-regular fa-bell"></i> Avísame cuando abra
+                    </button>
+                </div>
+
+                <!-- Arte y Danza -->
+                <div class="bg-sky-900/50 rounded-xl p-8 text-center border border-sky-800 hover:border-rose-500 transition group backdrop-blur-sm">
+                    <i class="fa-solid fa-masks-theater text-5xl text-sky-400 mb-6 group-hover:text-rose-400 group-hover:scale-110 transition duration-300"></i>
+                    <h3 class="text-xl font-bold mb-3">Arte, Actuación y Danza</h3>
+                    <p class="text-sky-200 text-sm mb-6">Desarrollo de habilidades escénicas, oratoria, expresión corporal y técnicas de danza para potenciar tu creatividad.</p>
+                    <button class="text-rose-400 font-semibold hover:text-rose-300 text-sm flex items-center justify-center mx-auto gap-2">
+                        <i class="fa-regular fa-bell"></i> Avísame cuando abra
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN PADRES DE FAMILIA -->
+    <!-- ========================================== -->
+    <section id="padres" class="py-20 bg-sky-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Madre latina apoyando el aprendizaje de su hijo" class="rounded-3xl shadow-2xl border-4 border-white">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-sky-600 font-bold tracking-wider text-sm uppercase">Zona para Padres</span>
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-6">Tranquilidad y Seguimiento Cercano</h2>
+                    <p class="text-slate-600 mb-8 leading-relaxed">Sabemos que la educación de tus hijos es tu prioridad. Por eso, este programa ofrece matrícula mensual flexible y comunicación constante para resolver todas tus dudas.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4 shrink-0">
+                                <i class="fa-solid fa-chart-line text-sky-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Reportes de Progreso</h4>
+                                <p class="text-sm text-slate-600">Conoce el avance académico y actitudinal de tu hijo cada mes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4 shrink-0">
+                                <i class="fa-solid fa-comments text-sky-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Comunicación Directa</h4>
+                                <p class="text-sm text-slate-600">Canal de WhatsApp activo y reuniones periódicas con los docentes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-sky-100 p-3 rounded-full mr-4 shrink-0">
+                                <i class="fa-solid fa-box-open text-sky-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Material y Logística</h4>
+                                <p class="text-sm text-slate-600">Te mantenemos informado del avance y gestionamos el envío de tu material de estudio.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/51999999999?text=Hola,%20soy%20padre/madre%20de%20familia%20y%20quisiera%20agendar%20una%20cita%20virtual%20con%20mi%20asesora%20del%20programa" target="_blank" class="mt-10 inline-flex items-center px-8 py-3 bg-rose-500 text-white rounded-xl font-bold hover:bg-rose-600 transition shadow-lg shadow-rose-500/30 gap-2">
+                        <i class="fa-solid fa-calendar-check"></i> Agenda tu cita virtual con tu asesora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- SECCIÓN JÓVENES INTERESADOS -->
+    <!-- ========================================== -->
+    <section id="jovenes" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <span class="text-rose-500 font-bold tracking-wider text-sm uppercase">Para Jóvenes</span>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mt-2 mb-6">Tu Futuro Comienza con esta Oportunidad</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-12">Aprende inglés y prepárate para el mundo laboral con herramientas prácticas y orientación profesional.</p>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl hover:border-sky-300 transition bg-slate-50">
+                    <i class="fa-solid fa-bullseye text-4xl text-sky-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-3 text-slate-900">Acompañamiento en Exámenes</h3>
+                    <p class="text-slate-600 text-sm">Te preparamos y orientamos para que rindas con éxito evaluaciones de dominio del idioma cuando lo decidas.</p>
+                </div>
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl hover:border-sky-300 transition bg-slate-50">
+                    <i class="fa-solid fa-handshake text-4xl text-sky-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-3 text-slate-900">Aliados Estratégicos</h3>
+                    <p class="text-slate-600 text-sm">Accede a descuentos y facilidades exclusivas en negocios, servicios y aliados comerciales de nuestra comunidad.</p>
+                </div>
+                <div class="p-8 border border-slate-200 rounded-2xl hover:shadow-xl hover:border-sky-300 transition bg-slate-50">
+                    <i class="fa-solid fa-users text-4xl text-sky-500 mb-4"></i>
+                    <h3 class="font-bold text-xl mb-3 text-slate-900">Eventos Formativos</h3>
+                    <p class="text-slate-600 text-sm">Participa en clubes de conversación, charlas con profesionales bilingües, talleres de oratoria y visitas académicas.</p>
+                </div>
+            </div>
+
+            <div class="mt-12">
+                <a href="https://wa.me/51999999999?text=Hola,%20quiero%20hacer%20el%20test%20vocacional%20gratis%20del%20programa" target="_blank" class="inline-flex items-center px-8 py-4 bg-rose-500 text-white rounded-xl font-bold text-lg hover:bg-rose-600 transition shadow-xl shadow-rose-500/20">
+                    <i class="fa-solid fa-compass mr-2"></i> Hacer Test Vocacional Gratis
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- FOOTER -->
+    <!-- ========================================== -->
+    <footer id="contacto" class="bg-slate-900 text-slate-300 py-16">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa-solid fa-rocket text-2xl text-sky-500"></i>
+                        <span class="text-xl font-extrabold text-white">CALLAO<span class="text-rose-500">CON FUTURO</span></span>
+                    </div>
+                    <p class="text-sm text-slate-400 mb-4 leading-relaxed">Programa de desarrollo de talento y becas educativas, impulsado por EMAGES GROUP bajo la Metodología ISA.</p>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-sky-500 hover:text-white transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-rose-500 hover:text-white transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-slate-700 hover:text-white transition"><i class="fa-brands fa-tiktok text-sm"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg">Programas de Inglés</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-rose-500"></i> Inglés para Niños (7-12)</a></li>
+                        <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-rose-500"></i> Inglés para Jóvenes (13-17)</a></li>
+                        <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-rose-500"></i> Inglés para Adultos (18+)</a></li>
+                        <li><a href="#" class="hover:text-sky-400 transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs text-rose-500"></i> Business English</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg">Próximamente</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#" class="hover:text-rose-400 transition flex items-center gap-2"><i class="fa-solid fa-clock text-xs text-sky-500"></i> Aviación y Negocios Int.</a></li>
+                        <li><a href="#" class="hover:text-rose-400 transition flex items-center gap-2"><i class="fa-solid fa-clock text-xs text-sky-500"></i> Asistencia Admin. y Contable</a></li>
+                        <li><a href="#" class="hover:text-rose-400 transition flex items-center gap-2"><i class="fa-solid fa-clock text-xs text-sky-500"></i> Arte, Actuación y Danza</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-lg">Contacto</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-rose-500"></i> 
+                            <span>Callao, Perú</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-rose-500"></i> 
+                            <span>(01) 456-7890</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-rose-500"></i> 
+                            <span>info@emagesgroup.com</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-clock text-rose-500"></i> 
+                            <span>Atención: Sábados 8:00 am - 9:00 pm</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- DISCLAIMER LEGAL OBLIGATORIO -->
+            <div class="border-t border-slate-800 pt-8 text-center text-xs text-slate-500">
+                <p class="mb-2">&copy; 2026 Programa Callao con Futuro. Todos los derechos reservados.</p>
+                <p class="max-w-4xl mx-auto leading-relaxed">
+                    El "Programa Callao con Futuro" es una iniciativa privada de responsabilidad social y desarrollo de talento, gestionada y financiada íntegramente por <strong class="text-slate-300">EMAGES GROUP</strong>. Este programa no tiene relación, vínculo, patrocinio ni representación del Estado Peruano, el Ministerio de Educación (MINEDU) o el programa gubernamental "Jóvenes del Bicentenario".
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <!-- ========================================== -->
+    <a href="https://wa.me/51999999999?text=Hola,%20quiero%20información%20sobre%20el%20Programa%20Callao%20con%20Futuro%20de%20EMAGES%20GROUP" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full shadow-2xl hover:bg-green-600 transition z-50 flex items-center justify-center hover:scale-110 duration-300 border-4 border-white">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+</html>
